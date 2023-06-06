@@ -4,5 +4,5 @@
 * Green: simple 3v3 rx/tx
 * Black: 3v3 rx/tx & reset circuit compatible with esptool
 
-<img src="img/uuart.jpg" width="512">
+<img src="img/uuarts.jpg" width="512">
 
