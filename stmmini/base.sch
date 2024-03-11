@@ -130,29 +130,14 @@ F 3 "" H 4200 2800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4200 2700 4200 2800
-Text GLabel 6800 2950 0    50   Input ~ 0
+Text GLabel 6550 2450 2    50   Input ~ 0
 RX
 Wire Wire Line
-	7050 2950 6800 2950
+	6300 2450 6550 2450
 Wire Wire Line
-	7050 3050 6800 3050
+	6300 2550 6550 2550
 Wire Wire Line
-	6800 2850 7050 2850
-$Comp
-L power:GND #PWR07
-U 1 1 64428915
-P 6800 3250
-F 0 "#PWR07" H 6800 3000 50  0001 C CNN
-F 1 "GND" H 6805 3077 50  0000 C CNN
-F 2 "" H 6800 3250 50  0001 C CNN
-F 3 "" H 6800 3250 50  0001 C CNN
-	1    6800 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6800 3150 6800 3250
-Wire Wire Line
-	6800 3150 7050 3150
+	6550 2350 6300 2350
 $Comp
 L Regulator_Linear:AP2112K-3.3 U2
 U 1 1 645E4E24
@@ -228,36 +213,6 @@ Wire Wire Line
 	1800 1000 1800 1150
 Text GLabel 4400 1000 2    50   Input ~ 0
 VCC
-$Comp
-L Connector_Generic:Conn_02x04_Top_Bottom J2
-U 1 1 6465166D
-P 7250 2950
-F 0 "J2" H 7300 3267 50  0000 C CNN
-F 1 "Conn_02x04_Top_Bottom" H 7300 3176 50  0000 C CNN
-F 2 "serial:PinSocket_2x04_P2.54mm_Edge" H 7250 2950 50  0001 C CNN
-F 3 "~" H 7250 2950 50  0001 C CNN
-	1    7250 2950
-	1    0    0    -1  
-$EndComp
-Text GLabel 7800 2850 2    50   Input ~ 0
-VUSB
-Wire Wire Line
-	7800 2850 7550 2850
-Wire Wire Line
-	7550 3150 7800 3150
-$Comp
-L power:GND #PWR0104
-U 1 1 6465DF0B
-P 7800 3250
-F 0 "#PWR0104" H 7800 3000 50  0001 C CNN
-F 1 "GND" H 7805 3077 50  0000 C CNN
-F 2 "" H 7800 3250 50  0001 C CNN
-F 3 "" H 7800 3250 50  0001 C CNN
-	1    7800 3250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7800 3150 7800 3250
 Text GLabel 2000 2100 0    50   Input ~ 0
 dm
 Wire Wire Line
@@ -290,22 +245,10 @@ Wire Wire Line
 Connection ~ 2100 1500
 Wire Wire Line
 	2100 1500 2150 1500
-Text GLabel 5250 1500 2    50   Input ~ 0
-EN
-Text GLabel 7700 2950 2    50   Input ~ 0
-EN
-Wire Wire Line
-	7700 2950 7550 2950
-Text GLabel 7700 3050 2    50   Input ~ 0
-RST
-Wire Wire Line
-	7700 3050 7550 3050
-Text GLabel 6800 2850 0    50   Input ~ 0
+Text GLabel 6550 2350 2    50   Input ~ 0
 VCC
-Text GLabel 6800 3050 0    50   Input ~ 0
+Text GLabel 6550 2550 2    50   Input ~ 0
 TX
-Text GLabel 5250 1400 2    50   Input ~ 0
-RST
 $Comp
 L MCU_ST_STM32F0:STM32F042F4Px U1
 U 1 1 65A4E954
@@ -375,34 +318,6 @@ Wire Wire Line
 	5000 1600 5250 1600
 Text GLabel 5250 1600 2    50   Input ~ 0
 TX
-Wire Wire Line
-	5000 1500 5250 1500
-Wire Wire Line
-	5000 1400 5250 1400
-$Comp
-L Switch:SW_SPST SW1
-U 1 1 65AA2F69
-P 3400 2100
-F 0 "SW1" V 3354 2198 50  0000 L CNN
-F 1 "SW_SPST" V 3445 2198 50  0000 L CNN
-F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_CK_KMR2" H 3400 2100 50  0001 C CNN
-F 3 "~" H 3400 2100 50  0001 C CNN
-	1    3400 2100
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3300 2500 3400 2500
-Wire Wire Line
-	3400 2300 3400 2500
-Connection ~ 3400 2500
-Wire Wire Line
-	3400 2500 3800 2500
-Text GLabel 3300 1700 0    50   Input ~ 0
-VCC
-Wire Wire Line
-	3300 1700 3400 1700
-Wire Wire Line
-	3400 1700 3400 1900
 $Comp
 L Device:C C2
 U 1 1 64473799
@@ -420,7 +335,7 @@ U 1 1 6442DCA1
 P 6650 1250
 F 0 "C1" H 6765 1296 50  0000 L CNN
 F 1 "1uF" H 6765 1205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder" H 6688 1100 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder" H 6688 1100 50  0001 C CNN
 F 3 "~" H 6650 1250 50  0001 C CNN
 	1    6650 1250
 	1    0    0    -1  
@@ -456,42 +371,12 @@ Wire Wire Line
 	3500 1350 3500 1450
 Wire Wire Line
 	5450 4450 5450 4600
-Text GLabel 5250 3550 0    50   Input ~ 0
+Text GLabel 5250 3850 0    50   Input ~ 0
 TXLED
-Text GLabel 4700 3550 0    50   Input ~ 0
+Text GLabel 4700 3850 0    50   Input ~ 0
 RXLED
 Wire Wire Line
-	4850 4050 4850 4150
-Wire Wire Line
-	5450 4050 5450 4150
-Wire Wire Line
-	4700 3550 4850 3550
-$Comp
-L Device:R R5
-U 1 1 65BB7C10
-P 5450 3900
-F 0 "R5" V 5450 3850 50  0000 L CNN
-F 1 "10k Ohm" V 5350 3750 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" V 5380 3900 50  0001 C CNN
-F 3 "~" H 5450 3900 50  0001 C CNN
-	1    5450 3900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 65BB703B
-P 4850 3900
-F 0 "R3" V 4850 3850 50  0000 L CNN
-F 1 "10k Ohm" V 4750 3750 50  0000 L CNN
-F 2 "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" V 4780 3900 50  0001 C CNN
-F 3 "~" H 4850 3900 50  0001 C CNN
-	1    4850 3900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5450 3550 5450 3750
-Wire Wire Line
-	4850 3550 4850 3750
+	4700 3850 4850 3850
 $Comp
 L Device:LED D1
 U 1 1 65BB0356
@@ -515,7 +400,7 @@ F 3 "~" H 5450 4300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5250 3550 5450 3550
+	5250 3850 5450 3850
 Wire Wire Line
 	4850 4450 4850 4600
 Wire Wire Line
@@ -536,12 +421,44 @@ Wire Wire Line
 Connection ~ 5150 4600
 Wire Wire Line
 	5150 4600 5450 4600
-Text GLabel 3750 2200 0    50   Input ~ 0
+Text GLabel 5050 1800 2    50   Input ~ 0
 RXLED
-Text GLabel 3750 2100 0    50   Input ~ 0
+Text GLabel 5050 1500 2    50   Input ~ 0
 TXLED
 Wire Wire Line
-	3750 2100 3800 2100
+	5050 1500 5000 1500
 Wire Wire Line
-	3750 2200 3800 2200
+	5050 1800 5000 1800
+Wire Wire Line
+	3300 2500 3800 2500
+$Comp
+L Connector:Conn_01x04_Male J2
+U 1 1 65DD7E41
+P 6100 2450
+F 0 "J2" H 6208 2731 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 6208 2640 50  0000 C CNN
+F 2 "" H 6100 2450 50  0001 C CNN
+F 3 "~" H 6100 2450 50  0001 C CNN
+	1    6100 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3850 4850 4150
+Wire Wire Line
+	5450 3850 5450 4150
+Wire Wire Line
+	6300 2650 6550 2650
+Wire Wire Line
+	6550 2650 6550 2750
+$Comp
+L power:GND #PWR07
+U 1 1 64428915
+P 6550 2750
+F 0 "#PWR07" H 6550 2500 50  0001 C CNN
+F 1 "GND" H 6555 2577 50  0000 C CNN
+F 2 "" H 6550 2750 50  0001 C CNN
+F 3 "" H 6550 2750 50  0001 C CNN
+	1    6550 2750
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
